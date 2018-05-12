@@ -1471,7 +1471,7 @@
                   </Border>
                   <BackgroundColor>White</BackgroundColor>
                   <BackgroundGradientType>Center</BackgroundGradientType>
-                  <BackgroundGradientEndColor>LightGrey</BackgroundGradientEndColor>
+                  <BackgroundGradientEndColor>Gainsboro</BackgroundGradientEndColor>
                 </Style>
               </Chart>
             </ReportItems>
