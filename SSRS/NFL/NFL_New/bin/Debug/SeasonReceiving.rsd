@@ -1,0 +1,110 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<SharedDataSet xmlns="http://schemas.microsoft.com/sqlserver/reporting/2010/01/shareddatasetdefinition" xmlns:rd="http://schemas.microsoft.com/SQLServer/reporting/reportdesigner">
+  <DataSet Name="DataSet1">
+    <Query>
+      <DataSourceReference>NFL</DataSourceReference>
+      <DataSetParameters>
+        <DataSetParameter Name="@Season">
+          <ReadOnly>false</ReadOnly>
+          <Nullable>false</Nullable>
+          <OmitFromQuery>false</OmitFromQuery>
+          <rd:DbType>Object</rd:DbType>
+        </DataSetParameter>
+      </DataSetParameters>
+      <CommandText>SELECT DISTINCT
+	p.PlayerID, 
+	p.Name AS [Player Name], 
+	t.TeamID,
+	t.Prefix_Name,
+	t.Name AS [Team Name],
+	t.Short_Name,
+	t.Conference,
+	t.Division,
+	sr.Season,
+	sr.Receptions,
+	sr.Targets,
+	sr.Receptions_Percentage,
+	sr.Total_Yards, 
+	sr.Drives,
+	sr.Total_Raw_YAC, 
+	sr.Fumbles,
+	sr.TDs
+FROM Player AS p
+JOIN SeasonReceiving AS sr
+	ON p.PlayerID = sr.ReceiverID
+JOIN Team AS t
+	ON t.TeamID = sr.TeamID
+WHERE sr.Season = @Season</CommandText>
+    </Query>
+    <Fields>
+      <Field Name="PlayerID">
+        <DataField>PlayerID</DataField>
+        <rd:TypeName>System.String</rd:TypeName>
+      </Field>
+      <Field Name="Player_Name">
+        <DataField>Player Name</DataField>
+        <rd:TypeName>System.String</rd:TypeName>
+      </Field>
+      <Field Name="TeamID">
+        <DataField>TeamID</DataField>
+        <rd:TypeName>System.Int32</rd:TypeName>
+      </Field>
+      <Field Name="Prefix_Name">
+        <DataField>Prefix_Name</DataField>
+        <rd:TypeName>System.String</rd:TypeName>
+      </Field>
+      <Field Name="Team_Name">
+        <DataField>Team Name</DataField>
+        <rd:TypeName>System.String</rd:TypeName>
+      </Field>
+      <Field Name="Short_Name">
+        <DataField>Short_Name</DataField>
+        <rd:TypeName>System.String</rd:TypeName>
+      </Field>
+      <Field Name="Conference">
+        <DataField>Conference</DataField>
+        <rd:TypeName>System.String</rd:TypeName>
+      </Field>
+      <Field Name="Division">
+        <DataField>Division</DataField>
+        <rd:TypeName>System.String</rd:TypeName>
+      </Field>
+      <Field Name="Season">
+        <DataField>Season</DataField>
+        <rd:TypeName>System.Double</rd:TypeName>
+      </Field>
+      <Field Name="Receptions">
+        <DataField>Receptions</DataField>
+        <rd:TypeName>System.Double</rd:TypeName>
+      </Field>
+      <Field Name="Targets">
+        <DataField>Targets</DataField>
+        <rd:TypeName>System.Double</rd:TypeName>
+      </Field>
+      <Field Name="Receptions_Percentage">
+        <DataField>Receptions_Percentage</DataField>
+        <rd:TypeName>System.Decimal</rd:TypeName>
+      </Field>
+      <Field Name="Total_Yards">
+        <DataField>Total_Yards</DataField>
+        <rd:TypeName>System.Double</rd:TypeName>
+      </Field>
+      <Field Name="Drives">
+        <DataField>Drives</DataField>
+        <rd:TypeName>System.Double</rd:TypeName>
+      </Field>
+      <Field Name="Total_Raw_YAC">
+        <DataField>Total_Raw_YAC</DataField>
+        <rd:TypeName>System.Double</rd:TypeName>
+      </Field>
+      <Field Name="Fumbles">
+        <DataField>Fumbles</DataField>
+        <rd:TypeName>System.Double</rd:TypeName>
+      </Field>
+      <Field Name="TDs">
+        <DataField>TDs</DataField>
+        <rd:TypeName>System.Double</rd:TypeName>
+      </Field>
+    </Fields>
+  </DataSet>
+</SharedDataSet>

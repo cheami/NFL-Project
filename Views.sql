@@ -1,3 +1,6 @@
 USE NFL
 GO
 
+/*
+NO VIEWS YET
+*/
