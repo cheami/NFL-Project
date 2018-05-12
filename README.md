@@ -62,4 +62,4 @@ After this execution the database is fully loaded!
 - NFL is my first project that only displays passer stats and information. Use Passing All Team For Season as the home report and navigate from there. All other reports have their parameter inputs hidden (they get their input from previous report).
 - NFL_New is my second project that will be much more user friendly and polished. It consists of all stats and demostrates more. Use Season as the home report and navigate from there. All other reports have their parameter inputs hidden (they get their input from previous report).
 
-# README STILL WORK IN PROGRESS
+# SKOL
