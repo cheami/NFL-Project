@@ -1,0 +1,102 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<SharedDataSet xmlns="http://schemas.microsoft.com/sqlserver/reporting/2010/01/shareddatasetdefinition" xmlns:rd="http://schemas.microsoft.com/SQLServer/reporting/reportdesigner">
+  <DataSet Name="DataSet1">
+    <Query>
+      <DataSourceReference>NFL</DataSourceReference>
+      <DataSetParameters>
+        <DataSetParameter Name="@GameID">
+          <ReadOnly>false</ReadOnly>
+          <Nullable>false</Nullable>
+          <OmitFromQuery>false</OmitFromQuery>
+          <rd:UserDefined>true</rd:UserDefined>
+          <rd:DbType>String</rd:DbType>
+        </DataSetParameter>
+      </DataSetParameters>
+      <CommandText>SELECT        TopXPassersForTeamForGame.Player_Name AS PlayerName, Team.Prefix_Name AS TeamPrefixName, Team.Name AS TeamName, Team_1.Prefix_Name AS OpponentPrefixName, Team_1.Name AS OpponentName, 
+                         GamePassing.Attempts, GamePassing.Completions, GamePassing.Comp_Per, GamePassing.Drives, GamePassing.Total_Yards, GamePassing.Times_Hit, GamePassing.Interceptions, GamePassing.TDs, Game.Season, Game.GameID, Game.Week, Game.Date
+FROM            GamePassing INNER JOIN
+                         Team ON GamePassing.TeamID = Team.TeamID INNER JOIN
+                         Team AS Team_1 ON GamePassing.OpponentID = Team_1.TeamID INNER JOIN
+                         Game ON GamePassing.GameID = Game.GameID CROSS APPLY dbo.TopXPassersForTeamForGame(Team.Name, GamePassing.GameID, 10) AS TopXPassersForTeamForGame</CommandText>
+    </Query>
+    <Fields>
+      <Field Name="PlayerName">
+        <DataField>PlayerName</DataField>
+        <rd:TypeName>System.String</rd:TypeName>
+      </Field>
+      <Field Name="TeamPrefixName">
+        <DataField>TeamPrefixName</DataField>
+        <rd:TypeName>System.String</rd:TypeName>
+      </Field>
+      <Field Name="TeamName">
+        <DataField>TeamName</DataField>
+        <rd:TypeName>System.String</rd:TypeName>
+      </Field>
+      <Field Name="OpponentPrefixName">
+        <DataField>OpponentPrefixName</DataField>
+        <rd:TypeName>System.String</rd:TypeName>
+      </Field>
+      <Field Name="OpponentName">
+        <DataField>OpponentName</DataField>
+        <rd:TypeName>System.String</rd:TypeName>
+      </Field>
+      <Field Name="Attempts">
+        <DataField>Attempts</DataField>
+        <rd:TypeName>System.Double</rd:TypeName>
+      </Field>
+      <Field Name="Completions">
+        <DataField>Completions</DataField>
+        <rd:TypeName>System.Double</rd:TypeName>
+      </Field>
+      <Field Name="Comp_Per">
+        <DataField>Comp_Per</DataField>
+        <rd:TypeName>System.Decimal</rd:TypeName>
+      </Field>
+      <Field Name="Drives">
+        <DataField>Drives</DataField>
+        <rd:TypeName>System.Double</rd:TypeName>
+      </Field>
+      <Field Name="Total_Yards">
+        <DataField>Total_Yards</DataField>
+        <rd:TypeName>System.Double</rd:TypeName>
+      </Field>
+      <Field Name="Times_Hit">
+        <DataField>Times_Hit</DataField>
+        <rd:TypeName>System.Double</rd:TypeName>
+      </Field>
+      <Field Name="Interceptions">
+        <DataField>Interceptions</DataField>
+        <rd:TypeName>System.Double</rd:TypeName>
+      </Field>
+      <Field Name="TDs">
+        <DataField>TDs</DataField>
+        <rd:TypeName>System.Double</rd:TypeName>
+      </Field>
+      <Field Name="Season">
+        <DataField>Season</DataField>
+        <rd:TypeName>System.Int32</rd:TypeName>
+      </Field>
+      <Field Name="GameID">
+        <DataField>GameID</DataField>
+        <rd:TypeName>System.Int32</rd:TypeName>
+      </Field>
+      <Field Name="Week">
+        <DataField>Week</DataField>
+        <rd:TypeName>System.Int32</rd:TypeName>
+      </Field>
+      <Field Name="Date">
+        <DataField>Date</DataField>
+        <rd:TypeName>System.DateTime</rd:TypeName>
+      </Field>
+    </Fields>
+    <Filters>
+      <Filter>
+        <FilterExpression>=Fields!GameID.Value</FilterExpression>
+        <Operator>Equal</Operator>
+        <FilterValues>
+          <FilterValue>=Parameters!GameID.Value</FilterValue>
+        </FilterValues>
+      </Filter>
+    </Filters>
+  </DataSet>
+</SharedDataSet>
