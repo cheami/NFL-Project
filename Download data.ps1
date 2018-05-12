@@ -1,0 +1,1 @@
+Start-BitsTransfer -Source https://raw.githubusercontent.com/ryurko/nflscrapR-data/master/data/season_play_by_play/pbp_2017.csv -Destination "C:\NFL Project\pbp_2017.csv"
