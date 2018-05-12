@@ -4,10 +4,7 @@ GO
 /*
 VERY IMPORTANT. RUN THIS FIRST TO CLEAN [PlayByPlay] TABLE!
 FIXES PASSERID, PASSER, ReceiverID, Receiver, ReceiverID, RECEIVERID, RECEIVER
-
-USE NFL
-GO
-
+*/
 UPDATE PlayByPlay
 SET Passer = pass.Passer
 FROM	(SELECT p1.PasserID, a.Passer
@@ -37,8 +34,6 @@ FROM	(SELECT p1.ReceiverID, a.Receiver
 		WHERE num = 1) AS receive
 WHERE PlayByPlay.ReceiverID = receive.ReceiverID
 GO
-
-*/
 
 /*
 Inserts all games from [PlayByPlay] table into [Game] table.
