@@ -8,6 +8,8 @@ Check each .sql file for descriptions on each batch of code. Database has a tota
 All scripts are separated for display purposes, but you can combine each .sql file together so you don't have to execute each one at a time.
 
 I suggest you create the database and then run the report files in SSRS or upload to your Report Server to view the reports. They are all made to be rendered in HTML/EXCEL, but you will need to create the database to allow the reports to query from the shared data sources.
+
+DEMO OF REPORTS (5/12/18): https://www.youtube.com/watch?v=JZiU8kPYY04
 ## Data
 The data (.csv) is too large to upload to GitHub. Each .csv file is >25mb with ~45k rows each and consists of every NFL play for each season, dating back to 2009.
 
