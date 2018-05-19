@@ -49,14 +49,17 @@
     <Reports>@(Report)</Reports>
   </PropertyGroup>
   <ItemGroup>
+    <DataSet Include="PlayerRushing.rsd" />
     <DataSet Include="SeasonPassing.rsd" />
     <DataSet Include="SeasonReceiving.rsd" />
     <DataSet Include="SeasonRushing.rsd" />
+    <DataSet Include="Seasons.rsd" />
   </ItemGroup>
   <ItemGroup>
     <DataSource Include="NFL.rds" />
   </ItemGroup>
   <ItemGroup>
+    <Report Include="PlayerRushing.rdl" />
     <Report Include="Season.rdl" />
   </ItemGroup>
   <Import Project="$(MSBuildExtensionsPath)\Reporting Services\Microsoft.ReportingServices.MSBuilder.targets" />

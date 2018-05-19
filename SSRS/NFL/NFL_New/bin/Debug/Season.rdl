@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8"?>
+﻿<?xml version="1.0" encoding="utf-8"?>
 <Report MustUnderstand="df" xmlns="http://schemas.microsoft.com/sqlserver/reporting/2016/01/reportdefinition" xmlns:rd="http://schemas.microsoft.com/SQLServer/reporting/reportdesigner" xmlns:df="http://schemas.microsoft.com/sqlserver/reporting/2016/01/reportdefinition/defaultfontfamily">
   <df:DefaultFontFamily>Segoe UI</df:DefaultFontFamily>
   <AutoRefresh>0</AutoRefresh>
@@ -239,6 +239,17 @@
         </Field>
       </Fields>
     </DataSet>
+    <DataSet Name="Seasons">
+      <SharedDataSet>
+        <SharedDataSetReference>Seasons</SharedDataSetReference>
+      </SharedDataSet>
+      <Fields>
+        <Field Name="season">
+          <DataField>season</DataField>
+          <rd:TypeName>System.Int32</rd:TypeName>
+        </Field>
+      </Fields>
+    </DataSet>
   </DataSets>
   <ReportSections>
     <ReportSection>
@@ -275,7 +286,6 @@
                   </Paragraph>
                 </Paragraphs>
                 <rd:DefaultName>Textbox691</rd:DefaultName>
-                <Top>0in</Top>
                 <Left>0.01042in</Left>
                 <Height>0.375in</Height>
                 <Width>8.5in</Width>
@@ -3391,7 +3401,7 @@
                 <Top>0.38417in</Top>
                 <Left>0.01042in</Left>
                 <Height>2in</Height>
-                <Width>8.49999in</Width>
+                <Width>8.49998in</Width>
                 <ZIndex>1</ZIndex>
                 <Style>
                   <Border>
@@ -3807,6 +3817,9 @@
                                 </Paragraph>
                               </Paragraphs>
                               <rd:DefaultName>Textbox1655</rd:DefaultName>
+                              <Visibility>
+                                <ToggleItem>Conference3</ToggleItem>
+                              </Visibility>
                               <Style>
                                 <Border>
                                   <Color>LightGrey</Color>
@@ -3841,6 +3854,9 @@
                                 </Paragraph>
                               </Paragraphs>
                               <rd:DefaultName>Textbox1656</rd:DefaultName>
+                              <Visibility>
+                                <ToggleItem>Conference3</ToggleItem>
+                              </Visibility>
                               <Style>
                                 <Border>
                                   <Color>LightGrey</Color>
@@ -3875,6 +3891,9 @@
                                 </Paragraph>
                               </Paragraphs>
                               <rd:DefaultName>Textbox1657</rd:DefaultName>
+                              <Visibility>
+                                <ToggleItem>Conference3</ToggleItem>
+                              </Visibility>
                               <Style>
                                 <Border>
                                   <Color>LightGrey</Color>
@@ -3909,6 +3928,9 @@
                                 </Paragraph>
                               </Paragraphs>
                               <rd:DefaultName>Textbox1658</rd:DefaultName>
+                              <Visibility>
+                                <ToggleItem>Conference3</ToggleItem>
+                              </Visibility>
                               <Style>
                                 <Border>
                                   <Color>LightGrey</Color>
@@ -3943,6 +3965,9 @@
                                 </Paragraph>
                               </Paragraphs>
                               <rd:DefaultName>Textbox1659</rd:DefaultName>
+                              <Visibility>
+                                <ToggleItem>Conference3</ToggleItem>
+                              </Visibility>
                               <Style>
                                 <Border>
                                   <Color>LightGrey</Color>
@@ -3977,6 +4002,9 @@
                                 </Paragraph>
                               </Paragraphs>
                               <rd:DefaultName>Textbox1660</rd:DefaultName>
+                              <Visibility>
+                                <ToggleItem>Conference3</ToggleItem>
+                              </Visibility>
                               <Style>
                                 <Border>
                                   <Color>LightGrey</Color>
@@ -4011,6 +4039,9 @@
                                 </Paragraph>
                               </Paragraphs>
                               <rd:DefaultName>Textbox1661</rd:DefaultName>
+                              <Visibility>
+                                <ToggleItem>Conference3</ToggleItem>
+                              </Visibility>
                               <Style>
                                 <Border>
                                   <Color>LightGrey</Color>
@@ -4087,6 +4118,9 @@
                                 </Paragraph>
                               </Paragraphs>
                               <rd:DefaultName>Textbox1655</rd:DefaultName>
+                              <Visibility>
+                                <ToggleItem>Division3</ToggleItem>
+                              </Visibility>
                               <Style>
                                 <Border>
                                   <Color>LightGrey</Color>
@@ -4121,6 +4155,9 @@
                                 </Paragraph>
                               </Paragraphs>
                               <rd:DefaultName>Textbox1656</rd:DefaultName>
+                              <Visibility>
+                                <ToggleItem>Division3</ToggleItem>
+                              </Visibility>
                               <Style>
                                 <Border>
                                   <Color>LightGrey</Color>
@@ -4155,6 +4192,9 @@
                                 </Paragraph>
                               </Paragraphs>
                               <rd:DefaultName>Textbox1657</rd:DefaultName>
+                              <Visibility>
+                                <ToggleItem>Division3</ToggleItem>
+                              </Visibility>
                               <Style>
                                 <Border>
                                   <Color>LightGrey</Color>
@@ -4189,6 +4229,9 @@
                                 </Paragraph>
                               </Paragraphs>
                               <rd:DefaultName>Textbox1658</rd:DefaultName>
+                              <Visibility>
+                                <ToggleItem>Division3</ToggleItem>
+                              </Visibility>
                               <Style>
                                 <Border>
                                   <Color>LightGrey</Color>
@@ -4223,6 +4266,9 @@
                                 </Paragraph>
                               </Paragraphs>
                               <rd:DefaultName>Textbox1659</rd:DefaultName>
+                              <Visibility>
+                                <ToggleItem>Division3</ToggleItem>
+                              </Visibility>
                               <Style>
                                 <Border>
                                   <Color>LightGrey</Color>
@@ -4257,6 +4303,9 @@
                                 </Paragraph>
                               </Paragraphs>
                               <rd:DefaultName>Textbox1660</rd:DefaultName>
+                              <Visibility>
+                                <ToggleItem>Division3</ToggleItem>
+                              </Visibility>
                               <Style>
                                 <Border>
                                   <Color>LightGrey</Color>
@@ -4291,6 +4340,9 @@
                                 </Paragraph>
                               </Paragraphs>
                               <rd:DefaultName>Textbox1661</rd:DefaultName>
+                              <Visibility>
+                                <ToggleItem>Division3</ToggleItem>
+                              </Visibility>
                               <Style>
                                 <Border>
                                   <Color>LightGrey</Color>
@@ -4367,6 +4419,9 @@
                                 </Paragraph>
                               </Paragraphs>
                               <rd:DefaultName>Textbox1655</rd:DefaultName>
+                              <Visibility>
+                                <ToggleItem>Team_Name3</ToggleItem>
+                              </Visibility>
                               <Style>
                                 <Border>
                                   <Color>LightGrey</Color>
@@ -4401,6 +4456,9 @@
                                 </Paragraph>
                               </Paragraphs>
                               <rd:DefaultName>Textbox1656</rd:DefaultName>
+                              <Visibility>
+                                <ToggleItem>Team_Name3</ToggleItem>
+                              </Visibility>
                               <Style>
                                 <Border>
                                   <Color>LightGrey</Color>
@@ -4435,6 +4493,9 @@
                                 </Paragraph>
                               </Paragraphs>
                               <rd:DefaultName>Textbox1657</rd:DefaultName>
+                              <Visibility>
+                                <ToggleItem>Team_Name3</ToggleItem>
+                              </Visibility>
                               <Style>
                                 <Border>
                                   <Color>LightGrey</Color>
@@ -4469,6 +4530,9 @@
                                 </Paragraph>
                               </Paragraphs>
                               <rd:DefaultName>Textbox1658</rd:DefaultName>
+                              <Visibility>
+                                <ToggleItem>Team_Name3</ToggleItem>
+                              </Visibility>
                               <Style>
                                 <Border>
                                   <Color>LightGrey</Color>
@@ -4503,6 +4567,9 @@
                                 </Paragraph>
                               </Paragraphs>
                               <rd:DefaultName>Textbox1659</rd:DefaultName>
+                              <Visibility>
+                                <ToggleItem>Team_Name3</ToggleItem>
+                              </Visibility>
                               <Style>
                                 <Border>
                                   <Color>LightGrey</Color>
@@ -4537,6 +4604,9 @@
                                 </Paragraph>
                               </Paragraphs>
                               <rd:DefaultName>Textbox1660</rd:DefaultName>
+                              <Visibility>
+                                <ToggleItem>Team_Name3</ToggleItem>
+                              </Visibility>
                               <Style>
                                 <Border>
                                   <Color>LightGrey</Color>
@@ -4571,6 +4641,9 @@
                                 </Paragraph>
                               </Paragraphs>
                               <rd:DefaultName>Textbox1661</rd:DefaultName>
+                              <Visibility>
+                                <ToggleItem>Team_Name3</ToggleItem>
+                              </Visibility>
                               <Style>
                                 <Border>
                                   <Color>LightGrey</Color>
@@ -8280,6 +8353,26 @@
                                           </Paragraph>
                                         </Paragraphs>
                                         <rd:DefaultName>Player_Name1</rd:DefaultName>
+                                        <ActionInfo>
+                                          <Actions>
+                                            <Action>
+                                              <Drillthrough>
+                                                <ReportName>PlayerRushing</ReportName>
+                                                <Parameters>
+                                                  <Parameter Name="Season">
+                                                    <Value>=Fields!Season.Value</Value>
+                                                  </Parameter>
+                                                  <Parameter Name="PlayerID">
+                                                    <Value>=Fields!PlayerID.Value</Value>
+                                                  </Parameter>
+                                                  <Parameter Name="TeamID">
+                                                    <Value>=Fields!TeamID.Value</Value>
+                                                  </Parameter>
+                                                </Parameters>
+                                              </Drillthrough>
+                                            </Action>
+                                          </Actions>
+                                        </ActionInfo>
                                         <Style>
                                           <Border>
                                             <Color>LightGrey</Color>
@@ -8536,6 +8629,13 @@
         </Values>
       </DefaultValue>
       <Prompt>Season</Prompt>
+      <ValidValues>
+        <DataSetReference>
+          <DataSetName>Seasons</DataSetName>
+          <ValueField>season</ValueField>
+          <LabelField>season</LabelField>
+        </DataSetReference>
+      </ValidValues>
     </ReportParameter>
   </ReportParameters>
   <ReportParametersLayout>
@@ -8552,5 +8652,6 @@
     </GridLayoutDefinition>
   </ReportParametersLayout>
   <rd:ReportUnitType>Inch</rd:ReportUnitType>
+  <rd:ReportServerUrl>http://desktop-7jehj77:80/ReportServer</rd:ReportServerUrl>
   <rd:ReportID>6a61dbaf-b76f-49c4-9f12-816b06e24013</rd:ReportID>
 </Report>
