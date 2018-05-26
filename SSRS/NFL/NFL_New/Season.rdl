@@ -417,7 +417,7 @@
                                 <Paragraph>
                                   <TextRuns>
                                     <TextRun>
-                                      <Value>Comp %</Value>
+                                      <Value>COMP %</Value>
                                       <Style>
                                         <FontFamily>Arial</FontFamily>
                                         <FontSize>12pt</FontSize>
@@ -3188,6 +3188,26 @@
                                           </Paragraph>
                                         </Paragraphs>
                                         <rd:DefaultName>Player_Name1</rd:DefaultName>
+                                        <ActionInfo>
+                                          <Actions>
+                                            <Action>
+                                              <Drillthrough>
+                                                <ReportName>PlayerPassing</ReportName>
+                                                <Parameters>
+                                                  <Parameter Name="Season">
+                                                    <Value>=Fields!Season.Value</Value>
+                                                  </Parameter>
+                                                  <Parameter Name="PlayerID">
+                                                    <Value>=Fields!PlayerID.Value</Value>
+                                                  </Parameter>
+                                                  <Parameter Name="TeamID">
+                                                    <Value>=Fields!TeamID.Value</Value>
+                                                  </Parameter>
+                                                </Parameters>
+                                              </Drillthrough>
+                                            </Action>
+                                          </Actions>
+                                        </ActionInfo>
                                         <Style>
                                           <Border>
                                             <Color>LightGrey</Color>
@@ -6062,6 +6082,26 @@
                                           </Paragraph>
                                         </Paragraphs>
                                         <rd:DefaultName>Player_Name1</rd:DefaultName>
+                                        <ActionInfo>
+                                          <Actions>
+                                            <Action>
+                                              <Drillthrough>
+                                                <ReportName>PlayerReceiving</ReportName>
+                                                <Parameters>
+                                                  <Parameter Name="Season">
+                                                    <Value>=Fields!Season.Value</Value>
+                                                  </Parameter>
+                                                  <Parameter Name="PlayerID">
+                                                    <Value>=Fields!PlayerID.Value</Value>
+                                                  </Parameter>
+                                                  <Parameter Name="TeamID">
+                                                    <Value>=Fields!TeamID.Value</Value>
+                                                  </Parameter>
+                                                </Parameters>
+                                              </Drillthrough>
+                                            </Action>
+                                          </Actions>
+                                        </ActionInfo>
                                         <Style>
                                           <Border>
                                             <Color>LightGrey</Color>

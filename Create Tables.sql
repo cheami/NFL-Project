@@ -80,7 +80,7 @@ CREATE TABLE GameReceiving(
 	Total_Yards	FLOAT NULL,
 	Total_Raw_YAC	FLOAT NULL,
 	Fumbles	FLOAT NULL,
-	Tds	FLOAT NULL,
+	TDs	FLOAT NULL,
 	CONSTRAINT PK_GameReceiving_GameID_ReceiverID PRIMARY KEY (GameID, ReceiverID, Player_Name)
 )
 GO

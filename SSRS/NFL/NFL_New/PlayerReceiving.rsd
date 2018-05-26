@@ -1,0 +1,139 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<SharedDataSet xmlns="http://schemas.microsoft.com/sqlserver/reporting/2010/01/shareddatasetdefinition" xmlns:rd="http://schemas.microsoft.com/SQLServer/reporting/reportdesigner">
+  <DataSet Name="DataSet1">
+    <Query>
+      <DataSourceReference>NFL</DataSourceReference>
+      <DataSetParameters>
+        <DataSetParameter Name="@Season">
+          <ReadOnly>false</ReadOnly>
+          <Nullable>false</Nullable>
+          <OmitFromQuery>false</OmitFromQuery>
+          <rd:DbType>Object</rd:DbType>
+        </DataSetParameter>
+        <DataSetParameter Name="@PlayerID">
+          <ReadOnly>false</ReadOnly>
+          <Nullable>false</Nullable>
+          <OmitFromQuery>false</OmitFromQuery>
+          <rd:DbType>Object</rd:DbType>
+        </DataSetParameter>
+        <DataSetParameter Name="@TeamID">
+          <ReadOnly>false</ReadOnly>
+          <Nullable>false</Nullable>
+          <OmitFromQuery>false</OmitFromQuery>
+          <rd:DbType>Object</rd:DbType>
+        </DataSetParameter>
+      </DataSetParameters>
+      <CommandText>SELECT        
+	gr.GameID, 
+	gr.ReceiverID, 
+	gr.Player_Name, 
+	g.Season, 
+	g.Week, 
+	g.Date,
+	gr.Targets,
+	gr.Receptions,
+	gr.Receptions_Percentage,
+	gr.Total_Yards, 
+	gr.Drives, 
+	gr.Total_Raw_YAC,
+	gr.Fumbles,
+	gr.TDs,
+	g.HomeTeamID, 
+	g.AwayTeamID, 
+	t1.Prefix_Name, 
+	t1.Name, 
+	t2.Prefix_Name AS Away_Prefix_Name, 
+	t2.Name AS Away_Name
+FROM GameReceiving AS gr 
+INNER JOIN Game AS g 
+	ON g.GameID = gr.GameID
+INNER JOIN Team AS t1 
+	ON t1.TeamID = g.HomeTeamID
+INNER JOIN Team AS t2 
+	ON t2.TeamID = g.AwayTeamID
+WHERE (g.Season = @Season) AND (gr.ReceiverID = @PlayerID) AND (gr.TeamID = @TeamID)</CommandText>
+    </Query>
+    <Fields>
+      <Field Name="GameID">
+        <DataField>GameID</DataField>
+        <rd:TypeName>System.Int32</rd:TypeName>
+      </Field>
+      <Field Name="ReceiverID">
+        <DataField>ReceiverID</DataField>
+        <rd:TypeName>System.String</rd:TypeName>
+      </Field>
+      <Field Name="Player_Name">
+        <DataField>Player_Name</DataField>
+        <rd:TypeName>System.String</rd:TypeName>
+      </Field>
+      <Field Name="Season">
+        <DataField>Season</DataField>
+        <rd:TypeName>System.Int32</rd:TypeName>
+      </Field>
+      <Field Name="Week">
+        <DataField>Week</DataField>
+        <rd:TypeName>System.Int32</rd:TypeName>
+      </Field>
+      <Field Name="Date">
+        <DataField>Date</DataField>
+        <rd:TypeName>System.DateTime</rd:TypeName>
+      </Field>
+      <Field Name="Targets">
+        <DataField>Targets</DataField>
+        <rd:TypeName>System.Double</rd:TypeName>
+      </Field>
+      <Field Name="Receptions">
+        <DataField>Receptions</DataField>
+        <rd:TypeName>System.Double</rd:TypeName>
+      </Field>
+      <Field Name="Receptions_Percentage">
+        <DataField>Receptions_Percentage</DataField>
+        <rd:TypeName>System.Decimal</rd:TypeName>
+      </Field>
+      <Field Name="Total_Yards">
+        <DataField>Total_Yards</DataField>
+        <rd:TypeName>System.Double</rd:TypeName>
+      </Field>
+      <Field Name="Drives">
+        <DataField>Drives</DataField>
+        <rd:TypeName>System.Double</rd:TypeName>
+      </Field>
+      <Field Name="Total_Raw_YAC">
+        <DataField>Total_Raw_YAC</DataField>
+        <rd:TypeName>System.Double</rd:TypeName>
+      </Field>
+      <Field Name="Fumbles">
+        <DataField>Fumbles</DataField>
+        <rd:TypeName>System.Double</rd:TypeName>
+      </Field>
+      <Field Name="TDs">
+        <DataField>TDs</DataField>
+        <rd:TypeName>System.Double</rd:TypeName>
+      </Field>
+      <Field Name="HomeTeamID">
+        <DataField>HomeTeamID</DataField>
+        <rd:TypeName>System.Int32</rd:TypeName>
+      </Field>
+      <Field Name="AwayTeamID">
+        <DataField>AwayTeamID</DataField>
+        <rd:TypeName>System.Int32</rd:TypeName>
+      </Field>
+      <Field Name="Prefix_Name">
+        <DataField>Prefix_Name</DataField>
+        <rd:TypeName>System.String</rd:TypeName>
+      </Field>
+      <Field Name="Name">
+        <DataField>Name</DataField>
+        <rd:TypeName>System.String</rd:TypeName>
+      </Field>
+      <Field Name="Away_Prefix_Name">
+        <DataField>Away_Prefix_Name</DataField>
+        <rd:TypeName>System.String</rd:TypeName>
+      </Field>
+      <Field Name="Away_Name">
+        <DataField>Away_Name</DataField>
+        <rd:TypeName>System.String</rd:TypeName>
+      </Field>
+    </Fields>
+  </DataSet>
+</SharedDataSet>

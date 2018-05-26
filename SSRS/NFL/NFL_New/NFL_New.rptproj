@@ -49,6 +49,8 @@
     <Reports>@(Report)</Reports>
   </PropertyGroup>
   <ItemGroup>
+    <DataSet Include="PlayerPassing.rsd" />
+    <DataSet Include="PlayerReceiving.rsd" />
     <DataSet Include="PlayerRushing.rsd" />
     <DataSet Include="SeasonPassing.rsd" />
     <DataSet Include="SeasonReceiving.rsd" />
@@ -59,6 +61,8 @@
     <DataSource Include="NFL.rds" />
   </ItemGroup>
   <ItemGroup>
+    <Report Include="PlayerPassing.rdl" />
+    <Report Include="PlayerReceiving.rdl" />
     <Report Include="PlayerRushing.rdl" />
     <Report Include="Season.rdl" />
   </ItemGroup>
