@@ -13,7 +13,7 @@ DEMO OF REPORTS (5/12/18): https://www.youtube.com/watch?v=JZiU8kPYY04
 ## Data
 The data (.csv) is too large to upload to GitHub. Each .csv file is >25mb with ~45k rows each and consists of every NFL play for each season, dating back to 2009.
 
-Source for data is here: https://github.com/ryurko/nflscrapR-data/tree/master/data/season_play_by_play
+Source for data is here: https://github.com/ryurko/nflscrapR-data/blob/master/play_by_play_data/regular_season/reg_pbp_2018.csv
 My C# script in the ETL package (Package.dtsx) cleans the .csv files by find and replacing all 'NA' and 'None' with '' (blank).
 
 ## Steps to install project
